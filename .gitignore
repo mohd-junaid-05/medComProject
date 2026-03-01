@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment variables - NEVER commit these
+.env
+.env.local
+.env.production
+
+# Prisma generated client
+server/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
+
+# Build outputs
+dist/
+build/
+
+# Prisma migrations lock (optional, some prefer to commit this)
+# prisma/migrations/

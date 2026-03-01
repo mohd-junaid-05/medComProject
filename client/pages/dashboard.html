@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – MedComm</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">Med<span>Comm</span></a>
+    <ul>
+      <li><a href="/dashboard" class="active">Dashboard</a></li>
+      <li><a href="/stock">Stock Images</a></li>
+    </ul>
+    <div class="nav-auth">
+      <button class="btn btn-outline btn-sm logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- LAYOUT -->
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar" id="sidebar-avatar">D</div>
+        <div class="sidebar-user-info">
+          <div class="name" id="sidebar-name">Loading...</div>
+          <div class="role" id="sidebar-role">Doctor</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/dashboard" class="active">
+          <span class="nav-icon">🏠</span> Dashboard
+        </a>
+        <a href="/stock">
+          <span class="nav-icon">🖼️</span> Stock Images
+        </a>
+        <button class="btn logout-btn" style="width:100%;text-align:left;padding:0.75rem 1rem;gap:0.75rem;display:flex;align-items:center;">
+          <span>🚪</span> Logout
+        </button>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Dashboard</h2>
+        <p>Generate and manage your medical illustrations</p>
+      </div>
+
+      <!-- Generate Panel -->
+      <div class="generate-panel">
+        <h3>🤖 Generate Medical Illustration</h3>
+        <div id="generate-alert" class="alert"></div>
+        <form id="generate-form">
+          <div class="form-group">
+            <label for="prompt">Describe the medical image you need</label>
+            <textarea id="prompt" placeholder="e.g. A detailed cross-section of the human heart showing all four chambers, valves, and major blood vessels with labels..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Generate Image</button>
+        </form>
+
+        <div id="generate-result" class="generate-result">
+          <h3 style="margin-bottom:1rem;">✅ Generated Image</h3>
+          <div class="generated-image-wrap">
+            <img id="result-img" src="" alt="Generated medical image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous Images -->
+      <div class="section-header">
+        <h3>🗂️ Your Image Library</h3>
+      </div>
+      <div id="images-grid" class="image-grid">
+        <div class="loading-wrap">
+          <div class="spinner"></div>
+          <p>Loading images...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+  <script type="module" src="/js/generate.js"></script>
+</body>
+</html>

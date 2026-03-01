@@ -1,0 +1,12 @@
+{
+  "name": "medcomm",
+  "version": "1.0.0",
+  "description": "MedComm - Medical Communication Platform",
+  "scripts": {
+    "dev": "nodemon server/src/server.js",
+    "start": "node server/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

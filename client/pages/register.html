@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – MedComm</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <div class="auth-page">
+    <!-- Visual Panel -->
+    <div class="auth-visual">
+      <div class="auth-visual-icon">🏥</div>
+      <h2>Join MedComm Today</h2>
+      <p>Create your account and start generating professional medical illustrations with AI in minutes.</p>
+      <br>
+      <ul class="about-list" style="text-align:left;margin-top:1rem;">
+        <li style="color:rgba(255,255,255,0.8);margin-bottom:0.5rem;">✓ Free to get started</li>
+        <li style="color:rgba(255,255,255,0.8);margin-bottom:0.5rem;">✓ AI-powered image generation</li>
+        <li style="color:rgba(255,255,255,0.8);">✓ Secure & private account</li>
+      </ul>
+    </div>
+
+    <!-- Form Panel -->
+    <div class="auth-form-container">
+      <div class="auth-form-box">
+        <a href="/" style="color:var(--primary);font-weight:600;font-size:0.9rem;">← Back to Home</a>
+        <br><br>
+        <h1>Create Account</h1>
+        <p class="subtitle">Fill in your details to register as a medical professional.</p>
+
+        <div id="form-alert" class="alert"></div>
+
+        <form id="register-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Dr. Jane Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="doctor@hospital.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Min. 8 characters" required />
+          </div>
+
+          <div class="form-group">
+            <label for="specialization">Specialization</label>
+            <select id="specialization" required>
+              <option value="">Select your specialization</option>
+              <option value="General Practice">General Practice</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="Radiology">Radiology</option>
+              <option value="Surgery">Surgery</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Oncology">Oncology</option>
+              <option value="Dermatology">Dermatology</option>
+              <option value="Psychiatry">Psychiatry</option>
+              <option value="Emergency Medicine">Emergency Medicine</option>
+              <option value="Anesthesiology">Anesthesiology</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Create Account</button>
+        </form>
+
+        <div class="form-footer">
+          Already have an account? <a href="/login">Sign in here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+</body>
+</html>
