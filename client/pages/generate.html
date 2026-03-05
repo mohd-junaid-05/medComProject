@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stock Images – MedComm</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Generate Image – MedComm</title>
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
 
-  <!-- LAYOUT -->
-  <div class="dashboard-layout">
+  
 
-    <!-- SIDEBAR -->
+  <div class="dashboard-layout">
     <aside class="sidebar">
   <div class="sidebar-logo">
     <img src="../images/medcomlogo.png" alt="MedComm" />
@@ -44,27 +43,44 @@
   </nav>
 </aside>
 
-    <!-- MAIN -->
     <main class="main-content">
       <div class="page-header">
-        <h2>Stock Image Repository</h2>
-        <p>Browse community-generated medical illustrations by specialty</p>
+        <h2>🤖 AI Image Generator</h2>
+        <p>Describe a medical scenario and generate a professional illustration instantly</p>
       </div>
 
-      <!-- Category Filters -->
-      <div id="filter-bar" class="filter-bar"></div>
+      <div class="generate-panel">
+        <h3>Generate Medical Illustration</h3>
+        <div id="generate-alert" class="alert"></div>
+        <form id="generate-form">
+          <div class="form-group">
+            <label for="prompt">Describe the medical image you need</label>
+            <textarea id="prompt" placeholder="e.g. A detailed cross-section of the human heart showing all four chambers, valves, and major blood vessels with labels..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Generate Image</button>
+        </form>
 
-      <!-- Image Grid -->
-      <div id="stock-grid" class="image-grid">
+        <div id="generate-result" class="generate-result">
+          <h3 style="margin-bottom:1rem;">✅ Generated Image</h3>
+          <div class="generated-image-wrap">
+            <img id="result-img" src="" alt="Generated medical image" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h3>🗂️ Your Image Library</h3>
+      </div>
+      <div id="images-grid" class="image-grid">
         <div class="loading-wrap">
           <div class="spinner"></div>
-          <p>Loading stock images...</p>
+          <p>Loading images...</p>
         </div>
       </div>
     </main>
   </div>
 
   <script type="module" src="/js/auth.js"></script>
-  <script type="module" src="/js/stock.js"></script>
+  <script type="module" src="/js/generate.js"></script>
 </body>
 </html>

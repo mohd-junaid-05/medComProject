@@ -24,8 +24,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../../client')));
 
 
-console.log('Client path:', path.join(__dirname, '../../client'));
-console.log('Index path:', path.join(__dirname, '../../client/pages/index.html'));
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/images', imageRoutes);
@@ -50,6 +48,10 @@ app.get('/dashboard', (req, res) => {
 app.get('/stock', (req, res) => {
   res.sendFile(path.join(__dirname, '../../client/pages/stock.html'));
 });
+app.get('/generate', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client/pages/generate.html'));
+});
+
 
 // Global error handler
 app.use((err, req, res, next) => {
