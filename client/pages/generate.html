@@ -4,64 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generate Image – MedComm</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  
-
   <div class="dashboard-layout">
     <aside class="sidebar">
-  <div class="sidebar-logo">
-    <img src="../images/medcomlogo.png" alt="MedComm" />
-  </div>
-
-  <div class="sidebar-user">
-    <div class="sidebar-avatar" id="sidebar-avatar">D</div>
-    <div class="sidebar-user-info">
-      <div class="name" id="sidebar-name">Loading...</div>
-      <div class="role" id="sidebar-role">Doctor</div>
-    </div>
-  </div>
-
-  <nav class="sidebar-nav">
-    <!-- dashboard.html → active on Dashboard -->
-    <!-- generate.html → active on Generate Image -->
-    <!-- stock.html    → active on Stock Images -->
-    <a href="/dashboard" class="active">
-      <span class="nav-icon">🏠</span> Dashboard
-    </a>
-    <a href="/generate">
-      <span class="nav-icon">🤖</span> Generate Image
-    </a>
-    <a href="/stock">
-      <span class="nav-icon">🖼️</span> Stock Images
-    </a>
-    <button class="btn logout-btn" style="width:100%;text-align:left;padding:0.75rem 1rem;gap:0.75rem;display:flex;align-items:center;">
-      <span>🚪</span> Logout
-    </button>
-  </nav>
-</aside>
+      <div class="sidebar-logo">
+        <img src="../images/medcomlogo.png" alt="MedComm" onerror="this.style.display='none'" />
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-avatar" id="sidebar-avatar">D</div>
+        <div class="sidebar-user-info">
+          <div class="name" id="sidebar-name">Loading...</div>
+          <div class="role" id="sidebar-role">Doctor</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="/dashboard">
+          <i class="fa-solid fa-house nav-icon"></i> Dashboard
+        </a>
+        <a href="/generate" class="active">
+          <i class="fa-solid fa-robot nav-icon"></i> Generate Image
+        </a>
+        <a href="/stock">
+          <i class="fa-solid fa-images nav-icon"></i> Stock Images
+        </a>
+        <button class="logout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </nav>
+    </aside>
 
     <main class="main-content">
       <div class="page-header">
-        <h2>🤖 AI Image Generator</h2>
+        <h2><i class="fa-solid fa-robot" style="color:var(--primary)"></i> AI Image Generator</h2>
         <p>Describe a medical scenario and generate a professional illustration instantly</p>
       </div>
 
       <div class="generate-panel">
-        <h3>Generate Medical Illustration</h3>
+        <h3><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--primary)"></i> Generate Medical Illustration</h3>
         <div id="generate-alert" class="alert"></div>
         <form id="generate-form">
           <div class="form-group">
-            <label for="prompt">Describe the medical image you need</label>
+            <label for="prompt"><i class="fa-solid fa-pen-to-square"></i> Describe the medical image you need</label>
             <textarea id="prompt" placeholder="e.g. A detailed cross-section of the human heart showing all four chambers, valves, and major blood vessels with labels..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Generate Image</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Image
+          </button>
         </form>
 
         <div id="generate-result" class="generate-result">
-          <h3 style="margin-bottom:1rem;">✅ Generated Image</h3>
+          <h3 style="margin-bottom:1rem;"><i class="fa-solid fa-circle-check" style="color:var(--success)"></i> Generated Image</h3>
           <div class="generated-image-wrap">
             <img id="result-img" src="" alt="Generated medical image" />
           </div>
@@ -69,7 +65,7 @@
       </div>
 
       <div class="section-header">
-        <h3>🗂️ Your Image Library</h3>
+        <h3><i class="fa-solid fa-layer-group" style="color:var(--primary)"></i> Your Image Library</h3>
       </div>
       <div id="images-grid" class="image-grid">
         <div class="loading-wrap">

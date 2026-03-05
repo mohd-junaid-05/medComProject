@@ -5,56 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stock Images – MedComm</title>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- LAYOUT -->
   <div class="dashboard-layout">
-
-    <!-- SIDEBAR -->
     <aside class="sidebar">
-  <div class="sidebar-logo">
-    <img src="../images/medcomlogo.png" alt="MedComm" />
-  </div>
+      <div class="sidebar-logo">
+        <img src="../images/medcomlogo.png" alt="MedComm" onerror="this.style.display='none'" />
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-avatar" id="sidebar-avatar">D</div>
+        <div class="sidebar-user-info">
+          <div class="name" id="sidebar-name">Loading...</div>
+          <div class="role" id="sidebar-role">Doctor</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="/dashboard">
+          <i class="fa-solid fa-house nav-icon"></i> Dashboard
+        </a>
+        <a href="/generate">
+          <i class="fa-solid fa-robot nav-icon"></i> Generate Image
+        </a>
+        <a href="/stock" class="active">
+          <i class="fa-solid fa-images nav-icon"></i> Stock Images
+        </a>
+        <button class="logout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </nav>
+    </aside>
 
-  <div class="sidebar-user">
-    <div class="sidebar-avatar" id="sidebar-avatar">D</div>
-    <div class="sidebar-user-info">
-      <div class="name" id="sidebar-name">Loading...</div>
-      <div class="role" id="sidebar-role">Doctor</div>
-    </div>
-  </div>
-
-  <nav class="sidebar-nav">
-    <!-- dashboard.html → active on Dashboard -->
-    <!-- generate.html → active on Generate Image -->
-    <!-- stock.html    → active on Stock Images -->
-    <a href="/dashboard" class="active">
-      <span class="nav-icon">🏠</span> Dashboard
-    </a>
-    <a href="/generate">
-      <span class="nav-icon">🤖</span> Generate Image
-    </a>
-    <a href="/stock">
-      <span class="nav-icon">🖼️</span> Stock Images
-    </a>
-    <button class="btn logout-btn" style="width:100%;text-align:left;padding:0.75rem 1rem;gap:0.75rem;display:flex;align-items:center;">
-      <span>🚪</span> Logout
-    </button>
-  </nav>
-</aside>
-
-    <!-- MAIN -->
     <main class="main-content">
       <div class="page-header">
-        <h2>Stock Image Repository</h2>
+        <h2><i class="fa-solid fa-images" style="color:var(--primary)"></i> Stock Image Repository</h2>
         <p>Browse community-generated medical illustrations by specialty</p>
       </div>
 
-      <!-- Category Filters -->
       <div id="filter-bar" class="filter-bar"></div>
 
-      <!-- Image Grid -->
       <div id="stock-grid" class="image-grid">
         <div class="loading-wrap">
           <div class="spinner"></div>

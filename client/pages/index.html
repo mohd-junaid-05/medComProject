@@ -4,16 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MedComm – Medical Communication Platform</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="/" class="navbar-brand">
-  <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img" />
-</a>
-    <ul id="nav-menu">
+      <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <span style="display:none">Med<span>Comm</span></span>
+    </a>
+    <ul id="nav-menu">  
       <li><a href="#about">About</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="/login">Login</a></li>
@@ -27,17 +29,28 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">For Medical Professionals</div>
+      <div class="hero-badge">
+        <i class="fa-solid fa-hospital-user"></i> For Medical Professionals
+      </div>
       <h1>AI-Powered <span>Medical</span> Imaging Platform</h1>
       <p>Generate, manage, and share professional medical illustrations instantly using advanced AI. Designed exclusively for doctors and healthcare professionals.</p>
       <div class="hero-btns">
-        <a href="/register"><button class="btn btn-primary btn-lg">Start Free Today</button></a>
-        <a href="#features"><button class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.5);">Learn More</button></a>
+        <a href="/register"><button class="btn btn-primary btn-lg"><i class="fa-solid fa-rocket"></i> Start Free Today</button></a>
+        <a href="#features"><button class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.5);"><i class="fa-solid fa-circle-info"></i> Learn More</button></a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><div class="stat-number">10K+</div><div class="stat-label">Images Generated</div></div>
-        <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Doctors Registered</div></div>
-        <div class="stat"><div class="stat-number">50+</div><div class="stat-label">Specializations</div></div>
+        <div class="stat">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label"><i class="fa-solid fa-image"></i> Images Generated</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label"><i class="fa-solid fa-user-doctor"></i> Doctors Registered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">50+</div>
+          <div class="stat-label"><i class="fa-solid fa-stethoscope"></i> Specializations</div>
+        </div>
       </div>
     </div>
   </section>
@@ -45,17 +58,26 @@
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container about-grid">
-      <div class="about-visual">🩺</div>
+      <div class="about-visual">
+  <img 
+    src="../images/medical-technology-ai-technology-is-utilized-by-doctors-for-diagnosing-increasing-the.webp" 
+    alt="Medical Technology" 
+    style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);"
+    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+  />
+  <i class="fa-solid fa-stethoscope" style="font-size:6rem;color:var(--primary);display:none;"></i>
+</div>
+
       <div class="about-text">
         <span class="section-label">About MedComm</span>
         <h2>The Future of Medical Visualization</h2>
         <p>MedComm empowers healthcare professionals with cutting-edge AI image generation to create accurate, professional medical illustrations for education, patient communication, and research.</p>
         <p>Our platform is built specifically for the medical community, with privacy, accuracy, and professionalism at its core.</p>
         <ul class="about-list">
-          <li>HIPAA-conscious design for patient safety</li>
-          <li>Specialized for medical contexts & terminology</li>
-          <li>Instant high-resolution image generation</li>
-          <li>Secure cloud storage for your images</li>
+          <li><i class="fa-solid fa-shield-halved"></i> HIPAA-conscious design for patient safety</li>
+          <li><i class="fa-solid fa-microscope"></i> Specialized for medical contexts & terminology</li>
+          <li><i class="fa-solid fa-bolt"></i> Instant high-resolution image generation</li>
+          <li><i class="fa-solid fa-cloud"></i> Secure cloud storage for your images</li>
         </ul>
       </div>
     </div>
@@ -66,35 +88,35 @@
     <div class="container">
       <span class="section-label">Features</span>
       <h2>Everything You Need</h2>
-      <p>A complete suite of tools designed for modern medical professionals.</p>
+      <p style="margin: 30px;">A complete suite of tools designed for modern medical professionals.</p>
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon">🤖</div>
+          <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
           <h3>AI Image Generation</h3>
           <p>Describe any medical scenario and our AI generates a professional, clinically accurate illustration in seconds.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🔒</div>
+          <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
           <h3>Secure & Private</h3>
           <p>JWT-protected accounts with encrypted passwords. Your data stays yours. Industry-grade security from day one.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🗂️</div>
+          <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
           <h3>Image Library</h3>
           <p>All your generated images saved in a personal library, organized and easily accessible from any device.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🌐</div>
+          <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
           <h3>Stock Repository</h3>
           <p>Browse a growing collection of community-generated medical images filtered by specialty and category.</p>
         </div>
         <div class="card">
-          <div class="card-icon">⚡</div>
+          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
           <h3>Instant Results</h3>
           <p>No waiting, no queues. Images are generated and stored in real time, ready to use immediately.</p>
         </div>
         <div class="card">
-          <div class="card-icon">📱</div>
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
           <h3>Fully Responsive</h3>
           <p>Access MedComm on any device — desktop, tablet, or mobile — with a consistent, clean experience.</p>
         </div>
@@ -106,12 +128,21 @@
   <section class="cta">
     <h2>Ready to Transform Your Practice?</h2>
     <p>Join thousands of doctors already using MedComm to enhance patient communication and medical education.</p>
-    <a href="/register"><button class="btn btn-lg" style="background:white;color:var(--primary);font-weight:700;">Create Free Account</button></a>
+    <a href="/register">
+      <button class="btn btn-lg" style="background:white;color:var(--primary);font-weight:700;">
+        <i class="fa-solid fa-user-plus"></i> Create Free Account
+      </button>
+    </a>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 MedComm. Built for healthcare professionals. | <a href="/login">Login</a> &nbsp;·&nbsp; <a href="/register">Register</a></p>
+    <p>
+      <i class="fa-solid fa-heart" style="color:var(--danger)"></i>
+      &copy; 2026 MedComm. Built for healthcare professionals.
+      CREATED BY MOHD JUNAID / HUZAIFA KHAN &nbsp;|&nbsp;
+      <a href="/login">Login</a> &nbsp;·&nbsp; <a href="/register">Register</a>
+    </p>
   </footer>
 
   <script>

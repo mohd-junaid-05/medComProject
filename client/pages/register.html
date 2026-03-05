@@ -5,27 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register – MedComm</title>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <div class="auth-page">
-    <!-- Visual Panel -->
     <div class="auth-visual">
-      <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img-auth" />
+      <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img-auth" onerror="this.style.display='none'" />
       <h2>Join MedComm Today</h2>
       <p>Create your account and start generating professional medical illustrations with AI in minutes.</p>
-      <br>
-      <ul class="about-list" style="text-align:left;margin-top:1rem;">
-        <li style="color:rgba(255,255,255,0.8);margin-bottom:0.5rem;">✓ Free to get started</li>
-        <li style="color:rgba(255,255,255,0.8);margin-bottom:0.5rem;">✓ AI-powered image generation</li>
-        <li style="color:rgba(255,255,255,0.8);">✓ Secure & private account</li>
-      </ul>
+      <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">Free to get started</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">AI-powered image generation</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">Secure & private account</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Form Panel -->
     <div class="auth-form-container">
       <div class="auth-form-box">
-        <a href="/" style="color:var(--primary);font-weight:600;font-size:0.9rem;">← Back to Home</a>
+        <a href="/" style="color:var(--primary);font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.4rem;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
         <br><br>
         <h1>Create Account</h1>
         <p class="subtitle">Fill in your details to register as a medical professional.</p>
@@ -34,22 +43,19 @@
 
         <form id="register-form" novalidate>
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name"><i class="fa-solid fa-user-doctor"></i> Full Name</label>
             <input type="text" id="name" placeholder="Dr. Jane Smith" required />
           </div>
-
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
             <input type="email" id="email" placeholder="doctor@hospital.com" required />
           </div>
-
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
             <input type="password" id="password" placeholder="Min. 8 characters" required />
           </div>
-
           <div class="form-group">
-            <label for="specialization">Specialization</label>
+            <label for="specialization"><i class="fa-solid fa-stethoscope"></i> Specialization</label>
             <select id="specialization" required>
               <option value="">Select your specialization</option>
               <option value="General Practice">General Practice</option>
@@ -67,8 +73,9 @@
               <option value="Other">Other</option>
             </select>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-full btn-lg">Create Account</button>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">
+            <i class="fa-solid fa-user-plus"></i> Create Account
+          </button>
         </form>
 
         <div class="form-footer">

@@ -5,21 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – MedComm</title>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <div class="auth-page">
-    <!-- Visual Panel -->
     <div class="auth-visual">
-      <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img-auth" />
+      <img src="../images/medcomlogo.png" alt="MedComm" class="logo-img-auth" onerror="this.style.display='none'" />
       <h2>Welcome Back</h2>
       <p>Sign in to your MedComm account to access your medical image library and generate new illustrations.</p>
+      <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">AI-powered image generation</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">Secure & private account</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);">
+          <i class="fa-solid fa-circle-check" style="color:var(--accent);font-size:1.1rem;"></i>
+          <span style="font-size:0.9rem;">Medical image library</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Form Panel -->
     <div class="auth-form-container">
       <div class="auth-form-box">
-        <a href="/" style="color:var(--primary);font-weight:600;font-size:0.9rem;">← Back to Home</a>
+        <a href="/" style="color:var(--primary);font-weight:600;font-size:0.9rem;display:inline-flex;align-items:center;gap:0.4rem;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
         <br><br>
         <h1>Sign In</h1>
         <p class="subtitle">Enter your credentials to access your dashboard.</p>
@@ -28,16 +43,16 @@
 
         <form id="login-form" novalidate>
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
             <input type="email" id="email" placeholder="doctor@hospital.com" required />
           </div>
-
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
             <input type="password" id="password" placeholder="Your password" required />
           </div>
-
-          <button type="submit" class="btn btn-primary btn-full btn-lg">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In
+          </button>
         </form>
 
         <div class="form-footer">
