@@ -1136,7 +1136,8 @@ footer a:hover { color: white; }
   .feature-cards { grid-template-columns: 1fr 1fr; }
 }
 
-/* ==================== FONT AWESOME ICON STYLES ==================== */
+ 
+
 .card-icon i, .feature-card-icon i { font-size: 1.4rem; color: var(--primary); transition: var(--transition); }
 .card:hover .card-icon i { color: white; }
 .stat-card-icon i { font-size: 1.3rem; color: var(--primary); }
