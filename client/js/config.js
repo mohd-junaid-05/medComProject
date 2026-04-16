@@ -1,5 +1,5 @@
 const CONFIG = {
-  API_BASE: 'https://medComProject.onrender.com/api',
+  API_BASE: 'https://medcomm-server.onrender.com/api',
 };
 
 export default CONFIG;
